@@ -1,5 +1,6 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
+import { TextButton } from "../components/TextButton";
 
 const cardData = [
     {
@@ -58,11 +59,7 @@ export const FeatureCards = () => {
                                 <h3 className="text-3xl font-black font-heading mt-12">{title}</h3>
                                 <p className="text-lg text-zinc-400 mt-4">{description}</p>
                                 <div className="flex items-center justify-between mt-12">
-                                    <button className={twMerge("text-sm font-heading uppercase font-extrabold tracking-wider text-fuchsia-500", 
-                                        color === "lime" && "text-lime-500",
-                                        color === "cyan" && "text-cyan-500",
-                                        color === "violet" && "text-violet-500"
-                                    )}>Learn More</button>
+                                    <TextButton color={color}>Learn More</TextButton>
                                     <FaLongArrowAltRight className="size-5 text-zinc-500 group-hover:text-zinc-300 transition duration-300 -translate-x-2 group-hover:translate-x-0"/>
                                 </div>
                             </div>

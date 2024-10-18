@@ -1,6 +1,7 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { TextButton } from "../components/TextButton";
+import { Card } from "../components/Card";
 
 const cardData = [
     {
@@ -18,7 +19,7 @@ const cardData = [
     {
         image: '/assets/images/cone.png',
         title: 'Next-Gen Smart Contracts',
-        description: 'Unlock the potential of next-gen smart contracts with our robust and scalable API, tailored for modern blockchain needs.',
+        description: 'Unlock the potential of next-gen smart contracts with our robust and scalable API, tailored for blockchain needs.',
         color: 'cyan'
     },
     {
@@ -38,35 +39,19 @@ export const FeatureCards = () => {
                     <div className="flex flex-none gap-8">
 
                         {cardData.map(({image, title, description, color}) => (
-                            <div>
-                            <div className="relative z-0 p-8 md:p-10 max-w-xs md:max-w-md group" key={title}>
-                            <div className={twMerge("absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition duration-300", 
-                                color === "lime" && "bg-lime-500",
-                                color === "cyan" && "bg-cyan-500",
-                                color === "violet" && "bg-violet-500",
-                            )}></div>
-                            <div className={twMerge("absolute size-16 rounded-xl bg-fuchsia-500 group-hover:bg-fuchsia-300 transition duration-300 top-1.5 right-1.5 -z-10", 
-                                color === "lime" && "bg-lime-500 group-hover:bg-lime-400",
-                                color === "cyan" && "bg-cyan-500 group-hover:bg-cyan-400",
-                                color === "violet" && "bg-violet-500 group-hover:bg-violet-400",
-                            )}></div>
-                            <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
+                            <Card key={title} className="max-w-xs md:max-w-md ">
                             <div className="p-4 ">
                                 <div className="flex justify-center -mt-20 relative">
                                     <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 group-hover:bg-zinc-950/30 transition duration-300 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]">
                                     </div>
                                     <img src={image} alt="Pill Image" className="size-40 group-hover:-translate-y-6 transition duration-300"/>
-                                </div>
+                                </div>                        
+                                
                                 <h3 className="text-3xl font-black font-heading mt-12">{title}</h3>
                                 <p className="text-lg text-zinc-400 mt-4">{description}</p>
-                                <div className="flex items-center justify-between mt-12">
-                                    <TextButton color={color}>Learn More</TextButton>
-                                    <FaLongArrowAltRight className="size-5 text-zinc-500 group-hover:text-zinc-300 transition duration-300 -translate-x-2 group-hover:translate-x-0"/>
-                                </div>
-                            </div>
-                            
-                         </div>
-                         </div>
+                                
+                            </div>    
+                         </Card>
                         ))}
 
                     </div>

@@ -39,7 +39,7 @@ export const FeatureCards = () => {
                     <div className="flex flex-none gap-8">
 
                         {cardData.map(({image, title, description, color}) => (
-                            <Card key={title} className="max-w-xs md:max-w-md ">
+                            <Card key={title} color={color} className="max-w-xs md:max-w-md ">
                             <div className="p-4 ">
                                 <div className="flex justify-center -mt-20 relative">
                                     <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 group-hover:bg-zinc-950/30 transition duration-300 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]">

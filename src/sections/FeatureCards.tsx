@@ -38,6 +38,7 @@ export const FeatureCards = () => {
                     <div className="flex flex-none gap-8">
 
                         {cardData.map(({image, title, description, color}) => (
+                            <div>
                             <div className="relative z-0 p-8 md:p-10 max-w-xs md:max-w-md group" key={title}>
                             <div className={twMerge("absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition duration-300", 
                                 color === "lime" && "bg-lime-500",
@@ -64,7 +65,8 @@ export const FeatureCards = () => {
                                 </div>
                             </div>
                             
-                        </div>
+                         </div>
+                         </div>
                         ))}
 
                     </div>

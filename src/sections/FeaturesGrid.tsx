@@ -33,9 +33,9 @@ export const FeatureGrid = () => {
                             </div>
                         </div>
                         <div >
-                            <div className="hidden md:block relative inline-flex z-0">
+                            <div className="hidden md:block relative  z-0">
                                 <img src="/assets/images/torus-knot.png" alt="Torus Knot 3d Image" className="size-96 max-w-none"/>
-                                <img src="/assets/images/hemisphere.png" alt="Hemisphere 3d image" className="absolute size-96 top-3/4 -z-10 scale-x-[-1]"/>
+                                <img src="/assets/images/hemisphere.png" alt="Hemisphere 3d image" className="absolute size-96 top-3/4 max-w-none -z-10 scale-x-[-1]"/>
                             </div>
                         </div>
                     </div>
